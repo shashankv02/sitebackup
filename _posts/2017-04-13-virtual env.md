@@ -81,7 +81,7 @@ First I'd create a virtualenv for my new python project in .virtualenvs director
     $ virtualenv spark
     New python executable in /Users/vshashank/.virtualenvs/spark/bin/python
 I   Installing setuptools, pip, wheel...done.
-    vshashank-mba:~ vshashank$ . .virtualenvs/spark/bin/activate
+    $ . .virtualenvs/spark/bin/activate
     (spark) $ cd dev
     (spark) $ mkdir spark
     (spark) $ python
