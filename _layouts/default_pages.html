@@ -1,0 +1,21 @@
+---
+layout: default_pages_no_sidebar
+---
+    
+        {{ content }}
+        
+        <div class="sidebar">
+            
+            <h2>Categories</h2><br>
+                <ul>
+                    {% for category in site.categories %}
+                    <li>
+                        {% capture category_name %}{{ category | first }} {% endcapture %}
+                        <a href="{{ site.url }}/topic/{{ category_name }}">{{ category_name }}({{ category | last | size }})</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+        </div>
+        
+    </div>
+

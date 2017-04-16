@@ -1,0 +1,19 @@
+---
+layout: default_pages_no_sidebar
+---
+
+<div class="about">
+I'd love to hear from you. Contact me using the form below.<br><br>
+Please provide your email so I can contact you back. <br><br><br>
+
+
+<form action="https://formspree.io/shashankv@live.in"
+    method="POST">
+    <input type="text" name="name" placeholder="name" size="44" style="font-size:14pt;" required><br><br>
+    <input type="email" name="_replyto" placeholder="email" size="44" style="font-size:14pt;" required><br><br>
+    <textarea name="message" placeholder="type your message here" rows="13" cols="43" style="font-size:14pt;" required></textarea><br>
+    <input type="submit" value="Send" height:50px;width:200px; text-align: center; font-size: 14px;/>
+    <input type="hidden" name="_next" value="{{ site.url }}/contact/thanks.html"/>
+</form>
+
+</div>
