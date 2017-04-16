@@ -14,7 +14,7 @@ When you install a third party package with pip, it is installed system-wide.  S
 virtualenv solves these problems by creating isolated python environments for each of your projects. 
 
 
-To understand how virtualenv works, we first need to understand how python searches for modules.
+To understand how virtualenv works, we first need to understand how python searches for packages.
 When we import a package, python interpreter searches a list of directories under `sys.path` variable. 
 
 
@@ -58,7 +58,7 @@ What activate does?
 * Changes PS1 prompt to indicate the actve virtualenv.
 * Saves current environmental variables like PATH
 * Change PATH environment variable. bin directory inside the virtualenv is prefixed to PATH variable. So when you run python command, python interpreter in the bin folder of the virtualenv is invoked. 
-* sys.path variable is changed to search for modules inside virtualenv first.
+* sys.path variable is changed to search for packages inside virtualenv first.
 
 
 On unix or mac, you can run `which python` to check which python interpreter is being used. 
