@@ -4,12 +4,16 @@
 @import "reset";
 @import "config";
 
-body {
+html, body {
 	color: $color-white;
 	background: $color-near-black;
 	font-family: 'Inconsolata', ;
 	font-size: 100%;
 	font-weight: 400;
+	margin:0; /* remove default margin */
+     	padding:0; /* remove default padding */
+     	width:100%; /* take full browser width */
+     	height:100%; /* take full browser height*/
 }
 h1 {
 	margin-bottom: 5px;
@@ -79,7 +83,14 @@ blockquote {
 }
 
 .post_wrapper {
-	max-width: 900px;
+	//max-width: 900px;
+	@media only screen and (min-device-width: 480px){
+		max-width: 95%;
+	}
+	@media only screen and (min-width : 992px) {
+		max-width:70%;
+    	}
+	
 	word-wrap: break-word;
 	margin: auto;
 	padding: 60px 0px 60px 0px;
@@ -128,7 +139,14 @@ blockquote {
 
 .blog {
 	padding-bottom: 30px;
-	float: left;
+	@media only screen and (min-width: 481px){
+		float: left;
+	}
+	
+	@media only screen and (max-width: 481px){
+		text-align: center
+	}
+
 	h1 {
 		font-size: 1.4em;
 		margin-bottom: 5px;
@@ -137,7 +155,14 @@ blockquote {
 
 .sidebar {
 	padding-bottom: 30px;
-	float: right;
+	
+	@media only screen and (min-width: 481px){
+		float: right;
+	}	
+	
+	@media only screen and (max-width: 480px){
+		text-align: center
+	}
 	h1 {
 		font-size: 1.4em;
 		margin-bottom: 5px;	
@@ -160,9 +185,16 @@ blockquote {
 
 	
 	&__posts {
-		margin-top: 20px;
+		//margin-top: 20px;
 		padding-bottom: 30px;
-		float: left;
+		@media only screen and (min-width: 481px){
+			float: left;
+		}
+	
+		@media only screen and (max-width: 481px){
+			text-align: center
+		}
+		
 		h1 {
 			font-size: 1.4em;
 			margin-bottom: 5px;
@@ -209,7 +241,8 @@ blockquote {
 	&__content {
 		padding-top: 40px;
 		word-wrap: break-word;
-		width: 900px;
+		//width: 900px;
+		max-width: 100%;
 		h1 {
 			font-size: 1.4em;
 			font-weight: 700;
@@ -280,10 +313,12 @@ blockquote {
 			line-height: 1.5;
 			border-radius: 3px;
 			background: $color-pure-black;
+			overflow: scroll;
+
 			code {
 				color: $color-code;
 				background: none;
-				width: 80%;
+				width: 100%;
 				//word-break: break-all;
 				//word-wrap: break-word;
 				//overflow-wrap: break-word;
@@ -300,7 +335,7 @@ blockquote {
 			
  			 	/* Adds a hyphen where the word breaks, if supported (No Blink) */
  				 -ms-hyphens: auto;
-  				-moz-hyphens: auto;
+  				 -moz-hyphens: auto;
  				 -webkit-hyphens: auto;
  				 hyphens: auto;
 			}
@@ -315,7 +350,21 @@ blockquote {
 
 .about {
 	//float: left
-	text-align:center; 
+	text-align: center; 
+
+	&__input {
+		width: 90%;
+	}
+	&__textarea {
+		width: 90%;
+		height: auto;
+	}
+	&__buttons {
+		width:20%;
+		height:100%;
+		font-size: 20em;
+		text-align: center;
+	}
 	&__title {
 		font-size: 1.6em;
 		font-weight: 700;
